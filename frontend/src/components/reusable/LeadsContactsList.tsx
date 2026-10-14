@@ -60,7 +60,7 @@ export function LeadsContactsList({
               {/* Action Phone Icon */}
               <button
                 aria-label={`Call ${contact.name}`}
-                className="flex h-7 w-7 items-center justify-center rounded-full text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                className="flex h-7 w-7 items-center justify-center rounded-full text-black hover:text-gray-900 bg-gray-100 transition-colors"
               >
                 <Phone className="h-3.5 w-3.5" />
               </button>

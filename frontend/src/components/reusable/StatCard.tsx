@@ -21,14 +21,14 @@ export function StatCard({ data, className }: StatCardProps) {
   return (
     <div
       className={cn(
-        "flex flex-col  justify-between rounded-3xl border border-gray-200/80 bg-white p-5 shadow-[0_2px_10px_rgba(0,0,0,0.03)] transition-all hover:border-[#D4AF37]/50 hover:shadow-md",
+        "flex flex-col  justify-between rounded-3xl border border-gray-200/80 bg-white p-5 shadow-cards transition-all hover:border-[#D4AF37]/50 hover:shadow-md",
         className
       )}
     >
       {/* Top Header: Icon and Label */}
       <div className="flex items-center gap-3">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-50 text-[#D4AF37]">
-          <Icon className="h-5 w-5" />
+          <Icon className="h-5 w-5 fill-[#D4AF37]" />
         </div>
         <span className="text-sm font-semibold tracking-tight text-gray-700">
           {data.title}
@@ -44,8 +44,8 @@ export function StatCard({ data, className }: StatCardProps) {
           className={cn(
             "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-semibold select-none",
             data.isPositive
-              ? "bg-emerald-50 text-emerald-600"
-              : "bg-rose-50 text-rose-500"
+              ? "bg-[#DAFFF7] text-[#48B998]"
+              : "bg-[#FEF0F2] text-[#C02547]"
           )}
         >
           {data.change}

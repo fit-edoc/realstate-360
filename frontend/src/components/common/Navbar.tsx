@@ -101,17 +101,17 @@ export function Navbar({ initialActiveId = "home", className }: NavbarProps) {
         className
       )}
     >
-      <div className="mx-auto flex h-16 w-full max-w-[1720px] items-center justify-between px-3 sm:px-4 lg:px-6">
+      <div className="mx-auto  flex h-16 w-full max-w-[1720px] items-center justify-between px-3 sm:px-4 lg:px-6">
         {/* Left Side: Brand Logo and Title */}
-        <div className="flex shrink-0 items-center gap-2.5">
+        <div className="flex  shrink-0 items-center">
           <Link
             href="/"
             onClick={() => setActiveItem("home")}
-            className="group flex items-center gap-2 transition-transform active:scale-98"
+            className="group flex items-center justify-center   transition-transform active:scale-98"
             aria-label="REALTOR360 Home"
           >
             {/* Logo from public/icon.png */}
-            <div className="relative flex h-8 w-8 items-center justify-center">
+            <div className="relative flex  justify-center items-centerh-8 w-8   items-center">
               <Image
                 src="/icon.png"
                 alt="REALTOR360 Logo Icon"
@@ -121,7 +121,7 @@ export function Navbar({ initialActiveId = "home", className }: NavbarProps) {
                 className="h-7 w-auto object-contain transition-opacity group-hover:opacity-90"
               />
             </div>
-            <span className="font-extrabold tracking-tight text-gray-900 text-lg md:text-xl font-sans uppercase">
+            <span className="font-extrabold tracking-tight text-gray-900 text-lg md:text-lg font-sans uppercase pr-4">
               REALTOR<span className="text-gray-950 font-black">360</span>
             </span>
           </Link>
@@ -129,7 +129,7 @@ export function Navbar({ initialActiveId = "home", className }: NavbarProps) {
 
         {/* Center: Desktop Navigation Links */}
         <nav
-          className="hidden xl:flex items-center gap-1 overflow-x-auto py-1 text-sm font-medium scrollbar-none"
+          className="hidden  xl:flex items-center  overflow-x-auto py-1  px-2.5 text-sm font-medium scrollbar-none mr-12"
           aria-label="Main Navigation"
         >
           {PRIMARY_NAV_ITEMS.map((item) => {
@@ -200,7 +200,7 @@ export function Navbar({ initialActiveId = "home", className }: NavbarProps) {
         {/* Right Side: Search and User Avatar Profile */}
         <div className="flex items-center gap-3">
           {/* Search Box with Search Icon on the right */}
-          <div className="relative hidden md:block w-26 lg:w-28 xl:w-52">
+          <div className="relative  hidden md:block w-26 lg:w-28 xl:w-22">
             <input
               type="text"
               value={searchQuery}

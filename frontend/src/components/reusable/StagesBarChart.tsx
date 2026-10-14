@@ -30,7 +30,7 @@ export function StagesBarChart({
         <div className="flex h-[210px] w-full">
           {/* Y Axis Label & Ticks */}
           <div className="flex flex-col items-center justify-between pr-2 text-[10px] text-gray-400">
-            <span className="rotate-[-90deg] translate-y-8 origin-center font-medium text-gray-500 whitespace-nowrap">
+            <span className="rotate-[-90deg] translate-y-19 -translate-x-10 origin-center font-medium text-gray-500 whitespace-nowrap">
               Record Count
             </span>
             <div className="flex h-full flex-col justify-between py-1 text-right">
@@ -69,7 +69,7 @@ export function StagesBarChart({
                     {/* Bottom segment: Angel Plaza */}
                     <div
                       style={{ height: `${plazaHeight}%` }}
-                      className="w-full bg-[#be9927] transition-all"
+                      className="w-full bg-[#ffc20c] transition-all"
                       title={`Angel Plaza: ${item.angelPlaza}`}
                     />
                     {/* Middle segment: Angel Garden */}

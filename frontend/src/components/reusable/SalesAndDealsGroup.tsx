@@ -23,9 +23,9 @@ export function SalesAndDealsGroup({ data, className }: SalesAndDealsGroupProps)
   const closedPercent = Math.round((dealsClosed.closedCount / totalDeals) * 100);
 
   return (
-    <div className={cn("flex flex-col gap-5", className)}>
+    <div className={cn("flex flex-col justify-between gap-5 h-full", className)}>
       {/* Top Card: Deals by Sales People */}
-      <div className="flex flex-col rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
+      <div className="flex flex-col justify-between flex-1 rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
         <h3 className="text-base font-semibold text-gray-900">{salesPeople.title}</h3>
 
         <div className="mt-4 flex flex-col">
@@ -97,7 +97,7 @@ export function SalesAndDealsGroup({ data, className }: SalesAndDealsGroupProps)
         <div className="mt-4 flex h-7 w-full overflow-hidden rounded-md bg-gray-100 p-0.5">
           <div
             style={{ width: `${closedPercent}%` }}
-            className="flex items-center justify-end rounded-sm bg-gradient-to-r from-[#be9927] to-[#dfc674] px-2 shadow-xs transition-all"
+            className="flex items-center justify-end rounded-sm bg-gradient-to-r from-[#D4AF37]   to-[#d4af3741] px-2 shadow-xs transition-all"
           />
         </div>
 

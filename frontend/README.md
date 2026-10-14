@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Realtor360 Frontend - Local Setup & Guide
 
-## Getting Started
+A modern Real Estate CRM and Analytics Dashboard built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**.
 
-First, run the development server:
+---
 
+## Running Locally
+
+### 1. Prerequisites
+- **Node.js**: v18.18+ or v20+ (recommended: Node.js 20 LTS)
+- **npm** (or pnpm / yarn)
+
+### 2. Install Dependencies
+From the `frontend` directory:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Run Development Server
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. View in Browser
+Open [http://localhost:3000](http://localhost:3000) in your browser. The app runs with instant fast-refresh.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Starts development server on port 3000 |
+| `npm run build` | Builds production bundle |
+| `npm run start` | Serves the production build |
+| `npm run lint` | Runs ESLint type & code quality checks |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Files & Directories
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx`: Main dashboard page layout.
+- `src/data/dashboardData.ts`: Central JSON configuration for all dashboard cards and metrics.
+- `src/components/reusable/DashboardCardRenderer.tsx`: Dynamic card renderer mapping JSON data to UI widgets.
+- `src/components/reusable/`: Modular widgets (Stat cards, charts, pipeline table, listings, calendar, reminders).
+- `src/components/common/Navbar.tsx`: Top Realtor360 navigation bar.

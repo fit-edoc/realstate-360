@@ -49,8 +49,8 @@ export function DashboardCardRenderer({ card }: DashboardCardRendererProps) {
   }[card.colSpan] || "col-span-1";
 
   return (
-    <div className={cn("w-full transition-all duration-150", colSpanClass)}>
-      <Component data={card.data} title={card.title} />
+    <div className={cn("w-full h-full flex flex-col transition-all duration-150", colSpanClass)}>
+      <Component data={card.data} title={card.title} className="h-full flex-1" />
     </div>
   );
 }
