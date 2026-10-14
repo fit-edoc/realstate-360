@@ -14,7 +14,7 @@ export default function DashboardPage() {
 
       {/* Main Two-Section Flex Dashboard Container */}
       <main className="flex-1 w-full max-w-[1720px] mx-auto px-3 sm:px-4 lg:px-6 py-6">
-        <div className="flex flex-col xl:flex-row items-start gap-5 w-full">
+        <div className="flex flex-col xl:flex-row items-stretch gap-5 w-full">
           {/* ========================================================= */}
           {/* LEFT MAIN SECTION: Data-Driven JSON Grid with colSpan     */}
           {/* ========================================================= */}
@@ -32,7 +32,7 @@ export default function DashboardPage() {
           {/* ========================================================= */}
           <aside
             aria-label="Schedule and Reminders"
-            className="w-full xl:w-[320px] 2xl:w-[350px] shrink-0 flex flex-col gap-5"
+            className="w-full xl:w-[320px] 2xl:w-[350px] shrink-0 flex flex-col gap-5 justify-between"
           >
             {/* 1. Reminders Card */}
             <RemindersWidget reminders={RIGHT_DASHBOARD_DATA.reminders} />
@@ -45,8 +45,11 @@ export default function DashboardPage() {
               highlightedDays={RIGHT_DASHBOARD_DATA.calendar.highlightedDays}
             />
 
-            {/* 3. Schedule List Card */}
-            <ScheduleWidget schedule={RIGHT_DASHBOARD_DATA.schedule} />
+            {/* 3. Schedule List Card (stretches to match left main end point) */}
+            <ScheduleWidget
+              schedule={RIGHT_DASHBOARD_DATA.schedule}
+              className="flex-1"
+            />
           </aside>
         </div>
       </main>

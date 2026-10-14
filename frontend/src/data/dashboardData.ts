@@ -284,9 +284,21 @@ export const RIGHT_DASHBOARD_DATA = {
     },
     {
       id: "sch-6",
-      title: "Submit Internal Review – Apartment PricingFinal Offer – Villa Deal",
+      title: "Submit Internal Review – Apartment Pricing",
       subtitle: "Update CRM with latest market rates.",
       colorVariant: "gold",
+    },
+    {
+      id: "sch-7",
+      title: "Contract Signing – Skyline Edge",
+      subtitle: "Meeting with attorney and buyer at 4:00 PM",
+      colorVariant: "green",
+    },
+    {
+      id: "sch-8",
+      title: "Site Inspection – Rosehill Cottage",
+      subtitle: "Physical verification of construction status",
+      colorVariant: "purple",
     },
   ] as ScheduleItem[],
 };
