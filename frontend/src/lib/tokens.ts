@@ -156,3 +156,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 94: style(calendar): style highlighted event days in green-100 with green-700 text
 
 // commit step 95: refactor(schedule): update ScheduleWidget color variants to green accents
+
+// commit step 96: feat(quick-actions): add QuickActionsWidget to fill remaining grid gap
