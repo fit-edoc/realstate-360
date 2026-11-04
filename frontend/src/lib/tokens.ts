@@ -142,3 +142,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 87: style(listing-table): format price, units, and views in Geist Mono
 
 // commit step 88: style(listing-table): style property status pills in green-100 and black/5
+
+// commit step 89: style(listing-table): refine lead avatar stack with white rings
