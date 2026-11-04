@@ -104,3 +104,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 64: refactor(donut): apply white/80 backdrop blur and 1px spread shadow
 
 // commit step 66: refactor(stages): migrate stacked bar colors from yellow to green palette
+
+// commit step 67: style(stages): update Angel Plaza segment to green-600 #16A34A
