@@ -146,3 +146,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 89: style(listing-table): refine lead avatar stack with white rings
 
 // commit step 90: refactor(contacts): update LeadsContactsList to white/80 surface with shadow
+
+// commit step 91: style(contacts): add green-50 circular phone action buttons with Tabler icons
