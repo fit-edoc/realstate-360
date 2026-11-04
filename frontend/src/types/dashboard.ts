@@ -5,7 +5,7 @@ export interface DashboardCardConfig {
   component: string;
   title?: string;
   colSpan: ColSpan;
-  data: any;
+  data: unknown;
 }
 
 export interface StatCardData {

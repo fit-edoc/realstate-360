@@ -13,6 +13,7 @@ import ActiveListingTable from "./ActiveListingTable";
 import LeadsContactsList from "./LeadsContactsList";
 
 // Component registry mapping JSON 'component' string to actual reusable component
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const COMPONENT_REGISTRY: Record<string, React.ComponentType<any>> = {
   StatCard,
   LeadSourceDonut,

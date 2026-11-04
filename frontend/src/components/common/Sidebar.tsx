@@ -47,15 +47,10 @@ export interface SidebarProps {
 
 export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps) {
   const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
-  const [currentActive, setCurrentActive] = React.useState<string>(activeId);
+  const currentActive = activeId;
   const shouldReduceMotion = useReducedMotion();
 
-  React.useEffect(() => {
-    setCurrentActive(activeId);
-  }, [activeId]);
-
   const handleItemClick = (id: string) => {
-    setCurrentActive(id);
     onSelect?.(id);
   };
 
@@ -156,7 +151,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
                       "relative flex h-9.5 w-full items-center rounded-[8px] transition-colors cursor-pointer select-none",
                       isExpanded ? "px-3 gap-3" : "justify-center px-0",
                       isActive
-                        ? "text-[#15803D]"
+                        ? "text-[#ffffff]"
                         : "text-[#0A0A0A]/60 hover:text-[#0A0A0A] hover:bg-white/60"
                     )}
                     aria-current={isActive ? "page" : undefined}
@@ -166,7 +161,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
                     {isActive && (
                       <motion.div
                         layoutId="nav-active"
-                        className="absolute inset-0 rounded-[8px] bg-[#DCFCE7] -z-10 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
+                        className="absolute inset-0 rounded-[8px] bg-[#000000] -z-10 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
