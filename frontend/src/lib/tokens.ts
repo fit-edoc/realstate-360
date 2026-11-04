@@ -128,3 +128,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 78: refactor(deals-closed): update progress bar from gold to green gradient
 
 // commit step 79: style(deals-closed): add closed deals and progress metrics display
+
+// commit step 80: style(sales-group): apply 12px radius, white border, and 1px spread shadow
