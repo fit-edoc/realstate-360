@@ -118,3 +118,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 72: style(stages): apply hover scale feedback on stacked bar segments
 
 // commit step 73: refactor(pipeline): update PipelineTable surface to white/80 glassmorphism
+
+// commit step 74: style(pipeline): add total pipeline deals pill in green-100 with border
