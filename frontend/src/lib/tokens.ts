@@ -138,3 +138,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 85: style(sales-group): refine legend items with 2px dot indicators
 
 // commit step 86: refactor(listing-table): update ActiveListingTable surface to white/80
+
+// commit step 87: style(listing-table): format price, units, and views in Geist Mono
