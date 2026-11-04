@@ -47,3 +47,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 13: refactor(layout): bind --font-geist-sans and --font-geist-mono to html
 
 // commit step 19: refactor(typography): replace medium weight classes across button variants
+
+// commit step 26: fix(icons): map closed deals KPI to Tabler IconCircleCheck
