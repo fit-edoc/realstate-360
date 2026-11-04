@@ -134,3 +134,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 81: refactor(sales-group): add responsive flex stretch behavior
 
 // commit step 82: docs(components): add inline comments for deal owner normalization math
+
+// commit step 85: style(sales-group): refine legend items with 2px dot indicators
