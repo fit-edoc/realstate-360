@@ -77,3 +77,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 49: style(stat-card): add positive trend badge in green-100 with green-700 text
 
 // commit step 50: style(stat-card): add negative trend badge in muted black/5 border
+
+// commit step 51: feat(stat-card): add icon container with green-50 background tint
