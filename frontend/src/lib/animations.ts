@@ -14,3 +14,4 @@ export const LABEL_BLUR_VARIANTS = {
   exit: { opacity: 0, filter: "blur(4px)", x: -6, transition: { duration: 0.15 } },
 };
 export const COLLAPSE_TRANSITION = { duration: 0.15 };
+export const TOOLTIP_DELAY = 150;
