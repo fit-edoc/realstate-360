@@ -88,3 +88,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 56: refactor(donut): replace yellow SVG slice fills with calibrated green scale
 
 // commit step 57: style(donut): update Website slice to green-500 #22C55E
+
+// commit step 58: style(donut): update Inbound Call slice to green-600 #16A34A
