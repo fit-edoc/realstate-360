@@ -105,6 +105,10 @@ export function SalesAndDealsGroup({ data, className }: SalesAndDealsGroupProps)
         {/* Progress Pill Bar */}
         <div className="mt-3 flex h-3 w-full overflow-hidden rounded-[8px] bg-black/5 p-0.5">
           <div
+            role="progressbar"
+            aria-valuenow={closedPercent}
+            aria-valuemin={0}
+            aria-valuemax={100}
             style={{ width: `${closedPercent}%` }}
             className="flex items-center justify-end rounded-[6px] bg-gradient-to-r from-[#16A34A] to-[#4ADE80] transition-all duration-300"
           />
