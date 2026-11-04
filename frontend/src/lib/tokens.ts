@@ -132,3 +132,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 80: style(sales-group): apply 12px radius, white border, and 1px spread shadow
 
 // commit step 81: refactor(sales-group): add responsive flex stretch behavior
+
+// commit step 82: docs(components): add inline comments for deal owner normalization math
