@@ -112,3 +112,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 69: style(stages): update None segment to green-200 #BBF7D0
 
 // commit step 70: style(stages): update Y-axis ticks and record count label to Geist Mono
+
+// commit step 71: style(stages): refine horizontal gridlines with soft black/5 dividers
