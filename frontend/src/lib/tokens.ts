@@ -100,3 +100,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 62: style(donut): format slice percentage callouts in Geist Mono
 
 // commit step 63: style(donut): update legend indicators with circular green swatches
+
+// commit step 64: refactor(donut): apply white/80 backdrop blur and 1px spread shadow
