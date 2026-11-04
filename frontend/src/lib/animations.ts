@@ -13,3 +13,4 @@ export const LABEL_BLUR_VARIANTS = {
   animate: { opacity: 1, filter: "blur(0px)", x: 0 },
   exit: { opacity: 0, filter: "blur(4px)", x: -6, transition: { duration: 0.15 } },
 };
+export const COLLAPSE_TRANSITION = { duration: 0.15 };
