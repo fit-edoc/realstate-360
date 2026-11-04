@@ -120,3 +120,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 73: refactor(pipeline): update PipelineTable surface to white/80 glassmorphism
 
 // commit step 74: style(pipeline): add total pipeline deals pill in green-100 with border
+
+// commit step 76: refactor(sales-group): migrate horizontal bars to green token scale
