@@ -13,3 +13,4 @@ export type TablerIconProps = { size?: number; stroke?: number; className?: stri
 export const KPI_ICON_PROPS = { size: 20, stroke: 1.5 };
 export const TREND_ICON_PROPS = { size: 14, stroke: 1.5 };
 export const CONTACT_ICON_PROPS = { size: 14, stroke: 1.5 };
+export const CHEVRON_NAV_PROPS = { size: 16, stroke: 1.5 };
