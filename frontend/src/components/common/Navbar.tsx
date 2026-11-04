@@ -48,7 +48,7 @@ export function Navbar({ className }: NavbarProps) {
   return (
     <header
       className={cn(
-        "relative z-30 w-full rounded-[12px] border border-white bg-white/80 backdrop-blur-md px-4 py-3 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
+        "relative z-30 w-full rounded-3xl border border-white bg-white/80 backdrop-blur-md px-4 py-3 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -123,7 +123,7 @@ export function Navbar({ className }: NavbarProps) {
             {isUserMenuOpen && (
               <div
                 role="menu"
-                className="absolute right-0 mt-2 w-56 rounded-[12px] border border-white bg-white/95 backdrop-blur-md p-1.5 z-[100] animate-in fade-in duration-150 shadow-[0_8px_24px_1px_rgba(0,0,0,0.08)]"
+                className="absolute right-0 mt-2 w-56 rounded-3xl border border-white bg-white/95 backdrop-blur-md p-1.5 z-[100] animate-in fade-in duration-150 shadow-[0_8px_24px_1px_rgba(0,0,0,0.08)]"
               >
                 <div className="border-b border-[#0A0A0A]/5 px-3 py-2.5">
                   <p className="text-xs font-normal text-[#0A0A0A]">Michael Roberts</p>

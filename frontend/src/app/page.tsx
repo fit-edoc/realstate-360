@@ -58,7 +58,7 @@ export default function DashboardPage() {
   const leadsContactsCard = LEFT_DASHBOARD_CARDS.find((c) => c.component === "LeadsContactsList");
 
   return (
-    <div className="min-h-screen flex flex-col font-sans font-normal text-[#0A0A0A] antialiased relative">
+    <div className="min-h-screen bg-radial from-[#00ff26] to-[#e9e9e9d0] flex flex-col font-sans font-normal text-[#0A0A0A] antialiased relative">
       {/* ========================================================= */}
       {/* 1. SIDEBAR (Fixed Full Height at top-level z-50)          */}
       {/* ========================================================= */}

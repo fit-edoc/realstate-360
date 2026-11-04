@@ -34,7 +34,7 @@ export function StatCard({ data, className }: StatCardProps) {
     <div
       aria-label={`${data.title}: ${data.value}`}
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-4.5 transition-colors select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
+        "flex flex-col justify-between rounded-3xl border border-white bg-white/80 backdrop-blur-md p-4.5 transition-colors select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >

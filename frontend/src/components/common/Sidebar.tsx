@@ -148,7 +148,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
                     type="button"
                     onClick={() => handleItemClick(item.id)}
                     className={cn(
-                      "relative flex h-9.5 w-full items-center rounded-[8px] transition-colors cursor-pointer select-none",
+                      "relative flex h-9.5 w-full items-center rounded-2xl transition-colors cursor-pointer select-none",
                       isExpanded ? "px-3 gap-3" : "justify-center px-0",
                       isActive
                         ? "text-[#ffffff]"

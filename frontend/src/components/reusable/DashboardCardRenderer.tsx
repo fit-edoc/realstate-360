@@ -34,7 +34,7 @@ export function DashboardCardRenderer({ card, className }: DashboardCardRenderer
 
   if (!Component) {
     return (
-      <div className="rounded-[12px] border border-red-200 bg-red-50 p-4 text-xs font-normal text-red-600">
+      <div className="rounded-3xl border border-red-200 bg-red-50 p-4 text-xs font-normal text-red-600">
         Unknown component: {card.component}
       </div>
     );

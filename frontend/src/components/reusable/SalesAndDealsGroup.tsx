@@ -27,7 +27,7 @@ export function SalesAndDealsGroup({ data, className }: SalesAndDealsGroupProps)
   return (
     <div className={cn("flex flex-col justify-between gap-4 h-full", className)}>
       {/* Top Section: Deals by Sales People */}
-      <div className="flex flex-col justify-between flex-1 rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]">
+      <div className="flex flex-col justify-between flex-1 rounded-3xl border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]">
         <div className="flex items-center justify-between">
           <h3 className="text-xs font-normal tracking-tight text-[#0A0A0A]">{salesPeople.title}</h3>
           <span className="text-[11px] font-normal text-[#0A0A0A]/50">Reps Performance</span>
