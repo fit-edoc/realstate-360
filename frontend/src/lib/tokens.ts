@@ -98,3 +98,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 61: style(donut): update callout leader lines to green-700 dashed paths
 
 // commit step 62: style(donut): format slice percentage callouts in Geist Mono
+
+// commit step 63: style(donut): update legend indicators with circular green swatches
