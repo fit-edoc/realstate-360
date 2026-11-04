@@ -41,3 +41,5 @@ export const CHART_PALETTE = [
 // commit step 8: style(globals): remove yellow and gold utility color definitions
 
 // commit step 9: style(globals): enforce global font-weight 400 inheritance on body
+
+export type ChartPaletteColor = typeof CHART_PALETTE[number];
