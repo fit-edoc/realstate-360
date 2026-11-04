@@ -61,3 +61,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 41: style(sidebar): apply 1px white border and 1px spread shadow
 
 // commit step 42: fix(sidebar): elevate sidebar to top-level z-50 stacking context
+
+// commit step 43: feat(sidebar): add click-outside backdrop overlay when expanded
