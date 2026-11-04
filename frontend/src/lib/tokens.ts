@@ -108,3 +108,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 67: style(stages): update Angel Plaza segment to green-600 #16A34A
 
 // commit step 68: style(stages): update Angel Garden segment to green-400 #4ADE80
+
+// commit step 69: style(stages): update None segment to green-200 #BBF7D0
