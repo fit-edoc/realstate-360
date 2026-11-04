@@ -69,3 +69,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 45: refactor(navbar): streamline header to breadcrumb, search, notifications and avatar
 
 // commit step 46: refactor(stat-card): update StatCard surface to white/80 with white border
+
+// commit step 47: style(stat-card): apply 12px radius and 1px spread subtle shadow
