@@ -9,3 +9,4 @@ export const TABLER_DEFAULT_CONFIG = {
 export const ICON_STROKE_WIDTH = 1.5;
 export const ICON_SIZE_DEFAULT = 20;
 export const ICON_SIZE_SM = 16;
+export type TablerIconProps = { size?: number; stroke?: number; className?: string };
