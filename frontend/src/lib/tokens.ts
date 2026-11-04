@@ -144,3 +144,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 88: style(listing-table): style property status pills in green-100 and black/5
 
 // commit step 89: style(listing-table): refine lead avatar stack with white rings
+
+// commit step 90: refactor(contacts): update LeadsContactsList to white/80 surface with shadow
