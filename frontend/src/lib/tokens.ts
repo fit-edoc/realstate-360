@@ -22,3 +22,8 @@ export const RADII = {
   card: "12px",
   control: "8px",
 } as const;
+
+export const SHADOWS = {
+  card: "0 1px 3px 1px rgba(0, 0, 0, 0.03)",
+  dropdown: "0 4px 12px 1px rgba(0, 0, 0, 0.05)",
+} as const;
