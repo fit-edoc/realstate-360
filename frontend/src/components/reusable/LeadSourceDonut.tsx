@@ -31,7 +31,7 @@ export function LeadSourceDonut({
 
       <div className="relative mt-2 flex flex-1 items-center justify-center min-h-[220px]">
         {/* Responsive Donut SVG Illustration */}
-        <svg
+        <svg role="img" aria-label="Donut Chart"
           viewBox="0 0 380 230"
           className="h-full w-full max-w-[400px] overflow-visible"
         >
