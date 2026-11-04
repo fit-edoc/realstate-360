@@ -13,7 +13,7 @@ export function RemindersWidget({ reminders, className }: RemindersWidgetProps) 
   return (
     <div
       className={cn(
-        "flex flex-col rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
+        "flex flex-col rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -31,7 +31,7 @@ export function RemindersWidget({ reminders, className }: RemindersWidgetProps) 
             return (
               <div
                 key={rem.id}
-                className="rounded-[8px] bg-[#DCFCE7]/60 p-3 border border-green-200/80"
+                className="rounded-[8px] bg-[#DCFCE7]/60 p-3 border border-green-200/80 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
               >
                 <h4 className="text-xs font-normal text-[#0A0A0A] tracking-tight">{rem.title}</h4>
                 <p className="mt-0.5 text-[11px] text-[#0A0A0A]/60 font-normal">{rem.description}</p>
@@ -44,7 +44,7 @@ export function RemindersWidget({ reminders, className }: RemindersWidgetProps) 
                     ]).map((avatarSrc, i) => (
                       <div
                         key={i}
-                        className="h-5 w-5 rounded-full border border-white bg-green-50 overflow-hidden"
+                        className="h-5 w-5 rounded-full border border-white bg-green-50 overflow-hidden shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
                       >
                         <img
                           src={avatarSrc}
@@ -53,7 +53,7 @@ export function RemindersWidget({ reminders, className }: RemindersWidgetProps) 
                         />
                       </div>
                     ))}
-                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#BBF7D0] text-[9px] font-mono font-normal text-[#14532D] border border-white">
+                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#BBF7D0] text-[9px] font-mono font-normal text-[#14532D] border border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
                       +11
                     </div>
                   </div>

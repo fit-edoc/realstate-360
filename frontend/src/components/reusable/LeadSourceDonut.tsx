@@ -20,7 +20,7 @@ export function LeadSourceDonut({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >

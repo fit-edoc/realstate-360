@@ -45,7 +45,7 @@ export function QuickActionsWidget({ className }: QuickActionsWidgetProps) {
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -61,9 +61,9 @@ export function QuickActionsWidget({ className }: QuickActionsWidgetProps) {
             <button
               key={act.id}
               type="button"
-              className="flex items-center gap-3 p-2.5 rounded-[8px] bg-white/60 hover:bg-white border border-white/80 text-left transition-colors cursor-pointer group"
+              className="flex items-center gap-3 p-2.5 rounded-[8px] bg-white/60 hover:bg-white border border-white/80 text-left transition-colors cursor-pointer group shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
             >
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[6px] bg-green-50 text-[#15803D] group-hover:bg-[#DCFCE7] transition-colors">
+              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[6px] bg-green-50 text-[#15803D] group-hover:bg-[#DCFCE7] transition-colors shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
                 <Icon size={16} stroke={1.5} />
               </div>
               <div className="min-w-0 flex-1">

@@ -33,7 +33,7 @@ export function CalendarWidget({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -85,9 +85,9 @@ export function CalendarWidget({
                 className={cn(
                   "flex h-6.5 w-6.5 items-center justify-center rounded-[8px] text-[11px] font-mono font-normal transition-colors cursor-pointer",
                   isActive
-                    ? "bg-[#0A0A0A] text-white"
+                    ? "bg-[#0A0A0A] text-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.05)]"
                     : isHighlighted
-                    ? "bg-[#DCFCE7] text-[#15803D] border border-green-200"
+                    ? "bg-[#DCFCE7] text-[#15803D] border border-green-200 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
                     : "text-[#0A0A0A]/70 hover:bg-white/80 hover:text-[#0A0A0A]"
                 )}
               >

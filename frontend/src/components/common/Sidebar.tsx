@@ -95,7 +95,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
         }}
         className={cn(
           "hidden md:flex fixed top-0 left-0 bottom-0 z-50 h-screen flex-col justify-between overflow-hidden",
-          "bg-white/95 backdrop-blur-md border-r border-white select-none",
+          "bg-white/95 backdrop-blur-md border-r border-white select-none shadow-[1px_0_3px_1px_rgba(0,0,0,0.03)]",
           className
         )}
         aria-label="Main Application Sidebar"
@@ -166,7 +166,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
                     {isActive && (
                       <motion.div
                         layoutId="nav-active"
-                        className="absolute inset-0 rounded-[8px] bg-[#DCFCE7] -z-10"
+                        className="absolute inset-0 rounded-[8px] bg-[#DCFCE7] -z-10 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
@@ -202,7 +202,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
                   {!isExpanded && (
                     <div
                       role="tooltip"
-                      className="absolute left-[calc(100%+10px)] top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-[8px] bg-[#0A0A0A] text-white text-xs font-normal whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 z-[60] border border-white/20"
+                      className="absolute left-[calc(100%+10px)] top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-[8px] bg-[#0A0A0A] text-white text-xs font-normal whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 z-[60] border border-white/20 shadow-[0_2px_6px_1px_rgba(0,0,0,0.15)]"
                     >
                       {item.label}
                     </div>
@@ -240,7 +240,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
       {/* MOBILE BOTTOM NAVIGATION BAR: Responsive Fallback        */}
       {/* ======================================================== */}
       <nav
-        className="md:hidden fixed bottom-0 left-0 right-0 z-50 h-14 bg-white/95 backdrop-blur-md border-t border-white flex items-center justify-around px-2"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-50 h-14 bg-white/95 backdrop-blur-md border-t border-white flex items-center justify-around px-2 shadow-[0_-1px_3px_1px_rgba(0,0,0,0.03)]"
         aria-label="Mobile Navigation"
       >
         {NAV_ITEMS.slice(0, 5).map((item) => {
@@ -262,7 +262,7 @@ export function Sidebar({ activeId = "home", onSelect, className }: SidebarProps
               {isActive && (
                 <motion.div
                   layoutId="mobile-nav-active"
-                  className="absolute inset-0 rounded-[8px] bg-[#DCFCE7] -z-10"
+                  className="absolute inset-0 rounded-[8px] bg-[#DCFCE7] -z-10 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
               )}

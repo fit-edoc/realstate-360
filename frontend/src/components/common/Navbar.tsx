@@ -48,7 +48,7 @@ export function Navbar({ className }: NavbarProps) {
   return (
     <header
       className={cn(
-        "w-full rounded-[12px] border border-white bg-white/80 backdrop-blur-md px-4 py-3 select-none",
+        "w-full rounded-[12px] border border-white bg-white/80 backdrop-blur-md px-4 py-3 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -59,7 +59,18 @@ export function Navbar({ className }: NavbarProps) {
             <span className="text-base font-normal tracking-tight text-[#0A0A0A]">
               StateFlow
             </span>
-           </div>
+            <span className="text-xs font-normal text-[#0A0A0A]/40">/</span>
+            <span className="text-xs font-normal text-[#15803D]">
+              Overview
+            </span>
+          </div>
+
+          <div className="hidden sm:flex items-center gap-1.5 rounded-[8px] bg-[#DCFCE7] px-2 py-0.5 border border-green-200 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#16A34A] animate-pulse" />
+            <span className="text-[11px] font-normal text-[#15803D] tracking-tight">
+              Live Sync
+            </span>
+          </div>
         </div>
 
         {/* Right Side: Global Search, Notifications & User Account */}
@@ -71,7 +82,7 @@ export function Navbar({ className }: NavbarProps) {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search properties, leads..."
-              className="h-8.5 w-full rounded-[8px] border border-white/80 bg-white/60 pr-8 pl-3 text-xs font-normal text-[#0A0A0A] placeholder:text-[#0A0A0A]/40 transition-colors focus:border-[#16A34A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#16A34A]/30"
+              className="h-8.5 w-full rounded-[8px] border border-white/80 bg-white/60 pr-8 pl-3 text-xs font-normal text-[#0A0A0A] placeholder:text-[#0A0A0A]/40 transition-colors focus:border-[#16A34A] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#16A34A]/30 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
             />
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2.5 text-[#0A0A0A]/50">
               <IconSearch size={16} stroke={1.5} />
@@ -82,7 +93,7 @@ export function Navbar({ className }: NavbarProps) {
           <button
             type="button"
             aria-label="View Notifications"
-            className="relative flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-[8px] text-[#0A0A0A]/70 hover:bg-white/80 hover:text-[#0A0A0A] transition-colors border border-transparent hover:border-white"
+            className="relative flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-[8px] text-[#0A0A0A]/70 hover:bg-white/80 hover:text-[#0A0A0A] transition-colors border border-transparent hover:border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
           >
             <IconBell size={18} stroke={1.5} />
             <span className="absolute top-1.5 right-1.5 h-1.5 w-1.5 rounded-full bg-[#16A34A]" />
@@ -101,7 +112,7 @@ export function Navbar({ className }: NavbarProps) {
                 src="/avatars/user.jpg"
                 alt="Account profile avatar"
                 fallback="MR"
-                className="h-7 w-7 rounded-full border border-white"
+                className="h-7 w-7 rounded-full border border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
               />
               <span className="hidden xl:inline text-xs font-normal text-[#0A0A0A]">
                 Michael R.
@@ -120,7 +131,7 @@ export function Navbar({ className }: NavbarProps) {
             {isUserMenuOpen && (
               <div
                 role="menu"
-                className="absolute right-0 mt-2 w-56 rounded-[12px] border border-white bg-white/95 backdrop-blur-md p-1.5 z-50 animate-in fade-in duration-150"
+                className="absolute right-0 mt-2 w-56 rounded-[12px]  border border-white bg-white/95 backdrop-blur-md p-1.5 z-auto animate-in fade-in duration-150 shadow-[0_4px_12px_1px_rgba(0,0,0,0.05)]"
               >
                 <div className="border-b border-[#0A0A0A]/5 px-3 py-2.5">
                   <p className="text-xs font-normal text-[#0A0A0A]">Michael Roberts</p>

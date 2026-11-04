@@ -33,13 +33,13 @@ export function StatCard({ data, className }: StatCardProps) {
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-4.5 transition-colors select-none",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-4.5 transition-colors select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
       {/* Top Header: Icon and Label */}
       <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[8px] bg-green-50 text-[#15803D]">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[8px] bg-green-50 text-[#15803D] shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
           <Icon size={20} stroke={1.5} className="text-inherit" />
         </div>
         <span className="text-xs font-normal tracking-tight text-[#0A0A0A]/70">
@@ -54,7 +54,7 @@ export function StatCard({ data, className }: StatCardProps) {
         </span>
         <span
           className={cn(
-            "inline-flex items-center gap-1 rounded-[8px] px-2 py-0.5 font-mono text-xs font-normal select-none border",
+            "inline-flex items-center gap-1 rounded-[8px] px-2 py-0.5 font-mono text-xs font-normal select-none border shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]",
             data.isPositive
               ? "bg-[#DCFCE7] text-[#15803D] border-green-200"
               : "bg-black/5 text-[#0A0A0A]/70 border-black/10"

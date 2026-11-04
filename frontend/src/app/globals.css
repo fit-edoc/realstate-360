@@ -19,15 +19,17 @@
 
   --radius-card: 12px;
   --radius-control: 8px;
+
+  --shadow-card: 0 1px 1px 10px rgba(0, 0, 0, 0.03);
 }
 
 :root {
   --green-50: #F0FDF4;
   --green-100: #DCFCE7;
   --green-200: #BBF7D0;
-  --green-300: #edfff4;
+  --green-300: #86EFAC;
   --green-400: #4ADE80;
-  --green-500: #c7ffdc;
+  --green-500: #22C55E;
   --green-600: #16A34A;
   --green-700: #15803D;
   --green-900: #14532D;
@@ -37,11 +39,8 @@
 
   --radius-card: 12px;
   --radius-control: 8px;
-}
 
-/* Strict Typography & Shadow Constraint: 400 max font weight and 0 shadows */
-* {
-  box-shadow: none !important;
+  --shadow-card: 0 1px 3px 1px rgba(0, 0, 0, 0.03);
 }
 
 body {

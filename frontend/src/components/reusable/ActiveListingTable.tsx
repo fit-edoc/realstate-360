@@ -20,7 +20,7 @@ export function ActiveListingTable({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -55,7 +55,7 @@ export function ActiveListingTable({
                   {/* Property Image + Title */}
                   <td className="py-3 pl-1">
                     <div className="flex items-center gap-2.5">
-                      <div className="relative h-8 w-8 overflow-hidden rounded-[6px] bg-green-50 shrink-0 border border-white">
+                      <div className="relative h-8 w-8 overflow-hidden rounded-[6px] bg-green-50 shrink-0 border border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
                         <img
                           src={prop.image || "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=100&q=80"}
                           alt={prop.name}
@@ -83,7 +83,7 @@ export function ActiveListingTable({
                       {(prop.leadAvatars || ["/avatars/lead-1.jpg", "/avatars/lead-2.jpg"]).map((avatarSrc, i) => (
                         <div
                           key={i}
-                          className="h-5 w-5 rounded-full border border-white bg-green-50 overflow-hidden"
+                          className="h-5 w-5 rounded-full border border-white bg-green-50 overflow-hidden shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
                         >
                           <img
                             src={avatarSrc}
@@ -92,7 +92,7 @@ export function ActiveListingTable({
                           />
                         </div>
                       ))}
-                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#DCFCE7] text-[9px] font-mono font-normal text-[#15803D] border border-white">
+                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#DCFCE7] text-[9px] font-mono font-normal text-[#15803D] border border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
                         +{prop.activeLeadsCount}
                       </div>
                     </div>
@@ -105,7 +105,7 @@ export function ActiveListingTable({
                   <td className="py-3 text-center">
                     <span
                       className={cn(
-                        "inline-flex items-center rounded-[8px] px-2 py-0.5 text-[10px] font-normal whitespace-nowrap border",
+                        "inline-flex items-center rounded-[8px] px-2 py-0.5 text-[10px] font-normal whitespace-nowrap border shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]",
                         isAvailable && "bg-[#DCFCE7] text-[#15803D] border-green-200",
                         isOccupied && "bg-green-50 text-[#14532D] border-green-100",
                         isSoldOut && "bg-black/5 text-[#0A0A0A]/60 border-black/10"

@@ -21,7 +21,7 @@ export function LeadsContactsList({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -47,7 +47,7 @@ export function LeadsContactsList({
             >
               {/* Avatar + Info */}
               <div className="flex items-center gap-2.5">
-                <div className="h-7 w-7 rounded-full overflow-hidden bg-green-50 border border-white shrink-0">
+                <div className="h-7 w-7 rounded-full overflow-hidden bg-green-50 border border-white shrink-0 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
                   <img
                     src={contact.avatar || "/avatars/lead-1.jpg"}
                     alt={contact.name}
@@ -64,7 +64,7 @@ export function LeadsContactsList({
               <button
                 type="button"
                 aria-label={`Call ${contact.name}`}
-                className="flex h-7 w-7 items-center justify-center rounded-[8px] text-[#15803D] bg-green-50 hover:bg-[#DCFCE7] border border-green-200 transition-colors cursor-pointer"
+                className="flex h-7 w-7 items-center justify-center rounded-[8px] text-[#15803D] bg-green-50 hover:bg-[#DCFCE7] border border-green-200 transition-colors cursor-pointer shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
               >
                 <IconPhone size={14} stroke={1.5} />
               </button>

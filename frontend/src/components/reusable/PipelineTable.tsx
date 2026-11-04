@@ -22,7 +22,7 @@ export function PipelineTable({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none h-full",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none h-full shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -59,7 +59,7 @@ export function PipelineTable({
       {/* Clean Footer Total */}
       <div className="mt-3 pt-3 border-t border-black/5 flex items-center justify-between text-xs">
         <span className="font-normal text-[#0A0A0A]/60">Total Pipeline Deals</span>
-        <span className="font-mono font-normal text-[#15803D] bg-[#DCFCE7] px-2.5 py-0.5 rounded-[8px] border border-green-200">
+        <span className="font-mono font-normal text-[#15803D] bg-[#DCFCE7] px-2.5 py-0.5 rounded-[8px] border border-green-200 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
           {totalCount} Deals
         </span>
       </div>
