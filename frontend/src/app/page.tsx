@@ -75,14 +75,14 @@ export default function DashboardPage() {
           {/* ======================================================= */}
           {/* 2. HEADER (Second item in entry stagger)                */}
           {/* ======================================================= */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="relative z-30">
             <Navbar initialActiveId={activeNav} />
           </motion.div>
 
           {/* ======================================================= */}
           {/* 3. 12-COLUMN BENTO GRID (Cards stagger into view)       */}
           {/* ======================================================= */}
-          <main className="w-full grid grid-cols-12 gap-4 items-stretch">
+          <main className="w-full grid grid-cols-12 gap-4 items-stretch relative z-10">
             {/* ROW 1: 4 Stat KPI Cards (3 columns each = 12 cols) */}
             {statCards.map((card) => (
               <motion.div

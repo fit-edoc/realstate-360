@@ -48,7 +48,7 @@ export function Navbar({ className }: NavbarProps) {
   return (
     <header
       className={cn(
-        "w-full rounded-[12px] border border-white bg-white/80 backdrop-blur-md px-4 py-3 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
+        "relative z-30 w-full rounded-[12px] border border-white bg-white/80 backdrop-blur-md px-4 py-3 select-none shadow-[0_1px_3px_1px_rgba(0,0,0,0.03)]",
         className
       )}
     >
@@ -59,18 +59,10 @@ export function Navbar({ className }: NavbarProps) {
             <span className="text-base font-normal tracking-tight text-[#0A0A0A]">
               StateFlow
             </span>
-            <span className="text-xs font-normal text-[#0A0A0A]/40">/</span>
-            <span className="text-xs font-normal text-[#15803D]">
-              Overview
-            </span>
+            
           </div>
 
-          <div className="hidden sm:flex items-center gap-1.5 rounded-[8px] bg-[#DCFCE7] px-2 py-0.5 border border-green-200 shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#16A34A] animate-pulse" />
-            <span className="text-[11px] font-normal text-[#15803D] tracking-tight">
-              Live Sync
-            </span>
-          </div>
+          
         </div>
 
         {/* Right Side: Global Search, Notifications & User Account */}
@@ -93,19 +85,19 @@ export function Navbar({ className }: NavbarProps) {
           <button
             type="button"
             aria-label="View Notifications"
-            className="relative flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-[8px] text-[#0A0A0A]/70 hover:bg-white/80 hover:text-[#0A0A0A] transition-colors border border-transparent hover:border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
+            className="relative flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-[8px] text-[#0A0A0A]/70 hover:bg-[#ececf4] hover:text-[#0A0A0A] transition-colors border border-transparent hover:border-white shadow-[0_1px_2px_1px_rgba(0,0,0,0.02)]"
           >
             <IconBell size={18} stroke={1.5} />
             <span className="absolute top-1.5 right-1.5 h-1.5 w-1.5 rounded-full bg-[#16A34A]" />
           </button>
 
           {/* User Profile Avatar with dropdown arrow */}
-          <div className="relative" ref={userMenuRef}>
+          <div className="relative z-30" ref={userMenuRef}>
             <button
               onClick={() => setIsUserMenuOpen((prev) => !prev)}
               aria-label="User account menu"
               aria-expanded={isUserMenuOpen}
-              className="flex cursor-pointer items-center gap-2 rounded-[8px] p-1 transition-opacity hover:opacity-90 focus:outline-none"
+              className="flex cursor-pointer items-center gap-2 rounded-[8px] p-1.5 transition-colors hover:bg-[#ececf4] focus:outline-none"
             >
               <Avatar
                 size="sm"
@@ -131,28 +123,28 @@ export function Navbar({ className }: NavbarProps) {
             {isUserMenuOpen && (
               <div
                 role="menu"
-                className="absolute right-0 mt-2 w-56 rounded-[12px]  border border-white bg-white/95 backdrop-blur-md p-1.5 z-auto animate-in fade-in duration-150 shadow-[0_4px_12px_1px_rgba(0,0,0,0.05)]"
+                className="absolute right-0 mt-2 w-56 rounded-[12px] border border-white bg-white/95 backdrop-blur-md p-1.5 z-[100] animate-in fade-in duration-150 shadow-[0_8px_24px_1px_rgba(0,0,0,0.08)]"
               >
                 <div className="border-b border-[#0A0A0A]/5 px-3 py-2.5">
                   <p className="text-xs font-normal text-[#0A0A0A]">Michael Roberts</p>
                   <p className="truncate text-[11px] font-normal text-[#0A0A0A]/60 font-mono">
                     m.roberts@realtor360.com
                   </p>
-                  <span className="mt-1.5 inline-block rounded-[8px] bg-[#DCFCE7] px-2 py-0.5 text-[10px] font-normal text-[#15803D]">
+                  <span className="mt-1.5 inline-block rounded-[8px] bg-[#ececf4] text-[#0A0A0A] border border-[#dcdce8] px-2 py-0.5 text-[10px] font-normal">
                     Broker Partner
                   </span>
                 </div>
                 <div className="py-1">
                   <button
                     onClick={() => setIsUserMenuOpen(false)}
-                    className="flex w-full items-center gap-2 rounded-[8px] px-3 py-1.5 text-xs font-normal text-[#0A0A0A]/80 hover:bg-green-50 hover:text-[#15803D] transition-colors"
+                    className="flex w-full items-center gap-2 rounded-[8px] px-3 py-1.5 text-xs font-normal text-[#0A0A0A]/80 hover:bg-[#ececf4] hover:text-[#0A0A0A] transition-colors"
                   >
                     <IconUser size={16} stroke={1.5} className="text-inherit" />
                     My Profile
                   </button>
                   <button
                     onClick={() => setIsUserMenuOpen(false)}
-                    className="flex w-full items-center gap-2 rounded-[8px] px-3 py-1.5 text-xs font-normal text-[#0A0A0A]/80 hover:bg-green-50 hover:text-[#15803D] transition-colors"
+                    className="flex w-full items-center gap-2 rounded-[8px] px-3 py-1.5 text-xs font-normal text-[#0A0A0A]/80 hover:bg-[#ececf4] hover:text-[#0A0A0A] transition-colors"
                   >
                     <IconSettings size={16} stroke={1.5} className="text-inherit" />
                     Account Settings
@@ -161,7 +153,7 @@ export function Navbar({ className }: NavbarProps) {
                 <div className="border-t border-[#0A0A0A]/5 pt-1">
                   <button
                     onClick={() => setIsUserMenuOpen(false)}
-                    className="flex w-full items-center gap-2 rounded-[8px] px-3 py-1.5 text-xs font-normal text-[#0A0A0A]/70 hover:bg-black/5 hover:text-[#0A0A0A] transition-colors"
+                    className="flex w-full items-center gap-2 rounded-[8px] px-3 py-1.5 text-xs font-normal text-[#0A0A0A]/70 hover:bg-[#ececf4] hover:text-[#0A0A0A] transition-colors"
                   >
                     <IconLogout size={16} stroke={1.5} />
                     Sign Out
