@@ -124,3 +124,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 76: refactor(sales-group): migrate horizontal bars to green token scale
 
 // commit step 77: style(sales-group): update deal owner axis and ticks to Geist Mono
+
+// commit step 78: refactor(deals-closed): update progress bar from gold to green gradient
