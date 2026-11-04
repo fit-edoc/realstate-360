@@ -53,3 +53,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 32: feat(sidebar): craft crisp 8x8 pixel StateFlow mark SVG
 
 // commit step 33: style(sidebar): apply shape-rendering crispEdges for pixel-perfect mark
+
+// commit step 39: feat(sidebar): add sidebar collapse/expand toggle control
