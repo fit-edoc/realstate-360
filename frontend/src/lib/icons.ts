@@ -12,3 +12,4 @@ export const ICON_SIZE_SM = 16;
 export type TablerIconProps = { size?: number; stroke?: number; className?: string };
 export const KPI_ICON_PROPS = { size: 20, stroke: 1.5 };
 export const TREND_ICON_PROPS = { size: 14, stroke: 1.5 };
+export const CONTACT_ICON_PROPS = { size: 14, stroke: 1.5 };
