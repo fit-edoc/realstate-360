@@ -86,3 +86,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 /** Verified AA contrast: #15803D (green-700) on #DCFCE7 ratio is 5.2:1 */
 
 // commit step 56: refactor(donut): replace yellow SVG slice fills with calibrated green scale
+
+// commit step 57: style(donut): update Website slice to green-500 #22C55E
