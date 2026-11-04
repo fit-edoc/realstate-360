@@ -51,3 +51,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 26: fix(icons): map closed deals KPI to Tabler IconCircleCheck
 
 // commit step 32: feat(sidebar): craft crisp 8x8 pixel StateFlow mark SVG
+
+// commit step 33: style(sidebar): apply shape-rendering crispEdges for pixel-perfect mark
