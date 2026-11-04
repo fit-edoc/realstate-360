@@ -102,3 +102,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 63: style(donut): update legend indicators with circular green swatches
 
 // commit step 64: refactor(donut): apply white/80 backdrop blur and 1px spread shadow
+
+// commit step 66: refactor(stages): migrate stacked bar colors from yellow to green palette
