@@ -162,3 +162,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 97: refactor(bento): rebalance dashboard layout into unified 12-column bento grid
 
 // commit step 98: style(bento): enforce 16px gaps and stretch cards to equal row heights
+
+// commit step 99: style(layout): ensure zero dead space at 1280px and 1440px viewport widths
