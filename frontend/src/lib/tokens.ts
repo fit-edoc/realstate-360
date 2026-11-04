@@ -150,3 +150,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 91: style(contacts): add green-50 circular phone action buttons with Tabler icons
 
 // commit step 92: refactor(calendar): update CalendarWidget to white/80 surface with 1px spread shadow
+
+// commit step 93: style(calendar): style active day pill in #0A0A0A black with white text
