@@ -160,3 +160,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 96: feat(quick-actions): add QuickActionsWidget to fill remaining grid gap
 
 // commit step 97: refactor(bento): rebalance dashboard layout into unified 12-column bento grid
+
+// commit step 98: style(bento): enforce 16px gaps and stretch cards to equal row heights
