@@ -67,3 +67,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 44: feat(navigation): create mobile bottom bar fallback with Tabler icons
 
 // commit step 45: refactor(navbar): streamline header to breadcrumb, search, notifications and avatar
+
+// commit step 46: refactor(stat-card): update StatCard surface to white/80 with white border
