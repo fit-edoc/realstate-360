@@ -43,3 +43,5 @@ export const CHART_PALETTE = [
 // commit step 9: style(globals): enforce global font-weight 400 inheritance on body
 
 export type ChartPaletteColor = typeof CHART_PALETTE[number];
+
+// commit step 13: refactor(layout): bind --font-geist-sans and --font-geist-mono to html
