@@ -92,3 +92,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 58: style(donut): update Inbound Call slice to green-600 #16A34A
 
 // commit step 59: style(donut): update Reference slice to green-700 #15803D
+
+// commit step 60: style(donut): update Facebook slice to green-300 #86EFAC
