@@ -63,3 +63,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 42: fix(sidebar): elevate sidebar to top-level z-50 stacking context
 
 // commit step 43: feat(sidebar): add click-outside backdrop overlay when expanded
+
+// commit step 44: feat(navigation): create mobile bottom bar fallback with Tabler icons
