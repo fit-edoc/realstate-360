@@ -38,7 +38,7 @@ export function PipelineTable({
           <table className="w-full text-left text-xs">
             <thead>
               <tr className="border-b border-black/5 text-[11px] font-normal text-[#0A0A0A]/50">
-                <th className="pb-2.5 font-normal">Development Name</th>
+                <th scope="col" className="pb-2.5 font-normal">Development Name</th>
                 <th className="pb-2.5 text-right font-normal">Record Count</th>
               </tr>
             </thead>
