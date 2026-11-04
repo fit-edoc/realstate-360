@@ -12,3 +12,8 @@ export const GREEN_SCALE = {
   700: "#15803D",
   900: "#14532D",
 } as const;
+
+export const BRAND_COLORS = {
+  black: "#0A0A0A",
+  white: "#FFFFFF",
+} as const;
