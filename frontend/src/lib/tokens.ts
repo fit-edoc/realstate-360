@@ -81,3 +81,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 51: feat(stat-card): add icon container with green-50 background tint
 
 // commit step 52: perf(stat-card): memoize StatCard component to prevent unnecessary re-renders
+
+// commit step 54: refactor(stat-card): extract ICON_MAP into typed icon registry
