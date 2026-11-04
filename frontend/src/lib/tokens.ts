@@ -122,3 +122,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 74: style(pipeline): add total pipeline deals pill in green-100 with border
 
 // commit step 76: refactor(sales-group): migrate horizontal bars to green token scale
+
+// commit step 77: style(sales-group): update deal owner axis and ticks to Geist Mono
