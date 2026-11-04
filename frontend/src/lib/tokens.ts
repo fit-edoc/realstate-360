@@ -148,3 +148,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 90: refactor(contacts): update LeadsContactsList to white/80 surface with shadow
 
 // commit step 91: style(contacts): add green-50 circular phone action buttons with Tabler icons
+
+// commit step 92: refactor(calendar): update CalendarWidget to white/80 surface with 1px spread shadow
