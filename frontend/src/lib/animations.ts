@@ -16,3 +16,7 @@ export const LABEL_BLUR_VARIANTS = {
 export const COLLAPSE_TRANSITION = { duration: 0.15 };
 export const TOOLTIP_DELAY = 150;
 export const COMPOSITE_ONLY_PROPERTIES = ["opacity", "filter", "transform"] as const;
+export const CONTAINER_ENTRY_VARIANTS = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
+};
