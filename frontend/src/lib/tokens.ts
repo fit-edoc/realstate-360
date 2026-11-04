@@ -17,3 +17,8 @@ export const BRAND_COLORS = {
   black: "#0A0A0A",
   white: "#FFFFFF",
 } as const;
+
+export const RADII = {
+  card: "12px",
+  control: "8px",
+} as const;
