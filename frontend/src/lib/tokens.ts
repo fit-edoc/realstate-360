@@ -37,3 +37,5 @@ export const CHART_PALETTE = [
 ] as const;
 
 // commit step 7: style(globals): add soft green radial gradient to page background
+
+// commit step 8: style(globals): remove yellow and gold utility color definitions
