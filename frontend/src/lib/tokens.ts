@@ -57,3 +57,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 39: feat(sidebar): add sidebar collapse/expand toggle control
 
 // commit step 40: style(sidebar): apply white/95 surface with backdrop-blur-md
+
+// commit step 41: style(sidebar): apply 1px white border and 1px spread shadow
