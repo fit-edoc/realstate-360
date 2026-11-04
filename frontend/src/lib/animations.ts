@@ -7,3 +7,4 @@ export const SIDEBAR_SPRING = {
   damping: 30,
 } as const;
 export const SIDEBAR_WIDTHS = { collapsed: 64, expanded: 220 } as const;
+export const NAV_ACTIVE_LAYOUT_ID = "nav-active";
