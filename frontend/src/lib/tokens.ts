@@ -154,3 +154,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 93: style(calendar): style active day pill in #0A0A0A black with white text
 
 // commit step 94: style(calendar): style highlighted event days in green-100 with green-700 text
+
+// commit step 95: refactor(schedule): update ScheduleWidget color variants to green accents
