@@ -35,3 +35,5 @@ export const CHART_PALETTE = [
   GREEN_SCALE[300],
   GREEN_SCALE[200],
 ] as const;
+
+// commit step 7: style(globals): add soft green radial gradient to page background
