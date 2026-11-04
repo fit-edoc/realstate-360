@@ -116,3 +116,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 71: style(stages): refine horizontal gridlines with soft black/5 dividers
 
 // commit step 72: style(stages): apply hover scale feedback on stacked bar segments
+
+// commit step 73: refactor(pipeline): update PipelineTable surface to white/80 glassmorphism
