@@ -15,3 +15,4 @@ export const TREND_ICON_PROPS = { size: 14, stroke: 1.5 };
 export const CONTACT_ICON_PROPS = { size: 14, stroke: 1.5 };
 export const CHEVRON_NAV_PROPS = { size: 16, stroke: 1.5 };
 export const ACTION_ICON_PROPS = { size: 16, stroke: 1.5 };
+/** All icon references strictly unified under @tabler/icons-react */
