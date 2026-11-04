@@ -6,3 +6,4 @@ export const SIDEBAR_SPRING = {
   stiffness: 300,
   damping: 30,
 } as const;
+export const SIDEBAR_WIDTHS = { collapsed: 64, expanded: 220 } as const;
