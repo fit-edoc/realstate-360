@@ -27,3 +27,11 @@ export const SHADOWS = {
   card: "0 1px 3px 1px rgba(0, 0, 0, 0.03)",
   dropdown: "0 4px 12px 1px rgba(0, 0, 0, 0.05)",
 } as const;
+
+export const CHART_PALETTE = [
+  GREEN_SCALE[600],
+  GREEN_SCALE[500],
+  GREEN_SCALE[400],
+  GREEN_SCALE[300],
+  GREEN_SCALE[200],
+] as const;
