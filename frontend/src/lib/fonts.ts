@@ -7,3 +7,4 @@ export const FONT_CONFIG = {
 } as const;
 
 export const TABULAR_NUMS_CLASS = "font-mono font-normal tracking-tight";
+export const HEADING_STYLES = "font-sans font-normal tracking-tight";
