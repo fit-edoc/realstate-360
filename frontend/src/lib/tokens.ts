@@ -71,3 +71,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 46: refactor(stat-card): update StatCard surface to white/80 with white border
 
 // commit step 47: style(stat-card): apply 12px radius and 1px spread subtle shadow
+
+// commit step 48: refactor(stat-card): implement Geist Mono for numeric values
