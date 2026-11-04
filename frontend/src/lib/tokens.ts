@@ -130,3 +130,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 79: style(deals-closed): add closed deals and progress metrics display
 
 // commit step 80: style(sales-group): apply 12px radius, white border, and 1px spread shadow
+
+// commit step 81: refactor(sales-group): add responsive flex stretch behavior
