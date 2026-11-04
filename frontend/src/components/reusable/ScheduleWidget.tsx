@@ -1,4 +1,7 @@
+"use client";
+
 import * as React from "react";
+import { IconArrowRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { ScheduleItem } from "@/types/dashboard";
 
@@ -11,36 +14,37 @@ export function ScheduleWidget({ schedule, className }: ScheduleWidgetProps) {
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)]",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
         className
       )}
     >
       <div className="flex flex-col flex-1">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-base font-semibold text-gray-900">My Schedule</h3>
-          <span className="text-xs font-medium text-gray-400">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-xs font-normal tracking-tight text-[#0A0A0A]">My Schedule</h3>
+          <span className="font-mono text-[11px] font-normal text-[#0A0A0A]/50">
             {schedule.length} Events
           </span>
         </div>
 
-        <div className="flex flex-col gap-3 flex-1">
-          {schedule.map((item) => {
-            const isGreen = item.colorVariant === "green";
-            const isPurple = item.colorVariant === "purple";
-            const isGold = item.colorVariant === "gold";
+        <div className="flex flex-col gap-2 flex-1">
+          {schedule.slice(0, 5).map((item) => {
+            const isEmerald = item.colorVariant === "emerald";
+            const isForest = item.colorVariant === "forest";
 
             return (
               <div
                 key={item.id}
                 className={cn(
-                  "pl-3 border-l-[3px] py-2 rounded-lg transition-all hover:translate-x-0.5 hover:bg-gray-50/50",
-                  isGreen && "border-emerald-500",
-                  isPurple && "border-indigo-400",
-                  isGold && "border-[#D4AF37]"
+                  "pl-2.5 border-l-2 py-1.5 rounded-r-[8px] transition-colors hover:bg-white/60",
+                  isEmerald
+                    ? "border-[#4ADE80]"
+                    : isForest
+                    ? "border-[#15803D]"
+                    : "border-[#16A34A]"
                 )}
               >
-                <h4 className="text-xs font-semibold text-gray-900">{item.title}</h4>
-                <p className="text-[11px] text-gray-400 leading-snug">{item.subtitle}</p>
+                <h4 className="text-xs font-normal text-[#0A0A0A] tracking-tight">{item.title}</h4>
+                <p className="text-[10px] text-[#0A0A0A]/50 leading-snug font-normal">{item.subtitle}</p>
               </div>
             );
           })}
@@ -48,13 +52,14 @@ export function ScheduleWidget({ schedule, className }: ScheduleWidgetProps) {
       </div>
 
       {/* Schedule Footer Action */}
-      <div className="mt-4 pt-3.5 border-t border-gray-100 flex items-center justify-between text-xs">
-        <span className="font-medium text-gray-500">Upcoming Tasks</span>
+      <div className="mt-3 pt-2.5 border-t border-black/5 flex items-center justify-between text-xs">
+        <span className="font-normal text-[#0A0A0A]/50 text-[11px]">Upcoming Tasks</span>
         <button
           type="button"
-          className="text-xs font-semibold text-[#D4AF37] hover:underline"
+          className="inline-flex items-center gap-1 text-xs font-normal text-[#15803D] hover:text-[#14532D] cursor-pointer"
         >
-          View All &rarr;
+          View All
+          <IconArrowRight size={14} stroke={1.5} />
         </button>
       </div>
     </div>

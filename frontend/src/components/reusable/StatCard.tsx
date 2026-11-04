@@ -1,13 +1,25 @@
+"use client";
+
 import * as React from "react";
-import { Home, User, Handshake, Coins, TrendingUp, TrendingDown } from "lucide-react";
+import {
+  IconHome,
+  IconUserCheck,
+  IconCircleCheck,
+  IconReceiptTax,
+  IconTrendingUp,
+  IconTrendingDown,
+} from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { StatCardData } from "@/types/dashboard";
 
-const ICON_MAP = {
-  listing: Home,
-  leads: User,
-  closed: Handshake,
-  revenue: Coins,
+const ICON_MAP: Record<
+  StatCardData["iconType"],
+  React.ComponentType<{ size?: number; stroke?: number; className?: string }>
+> = {
+  listing: IconHome,
+  leads: IconUserCheck,
+  closed: IconCircleCheck,
+  revenue: IconReceiptTax,
 };
 
 export interface StatCardProps {
@@ -16,43 +28,43 @@ export interface StatCardProps {
 }
 
 export function StatCard({ data, className }: StatCardProps) {
-  const Icon = ICON_MAP[data.iconType] || Home;
+  const Icon = ICON_MAP[data.iconType] || IconHome;
 
   return (
     <div
       className={cn(
-        "flex flex-col  justify-between rounded-3xl border border-gray-200/80 bg-white p-5 shadow-cards transition-all hover:border-[#D4AF37]/50 hover:shadow-md",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-4.5 transition-colors select-none",
         className
       )}
     >
       {/* Top Header: Icon and Label */}
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-50 text-[#D4AF37]">
-          <Icon className="h-5 w-5 fill-[#D4AF37]" />
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[8px] bg-green-50 text-[#15803D]">
+          <Icon size={20} stroke={1.5} className="text-inherit" />
         </div>
-        <span className="text-sm font-semibold tracking-tight text-gray-700">
+        <span className="text-xs font-normal tracking-tight text-[#0A0A0A]/70">
           {data.title}
         </span>
       </div>
 
-      {/* Bottom Content: Numeric Value and Change Badge */}
-      <div className="mt-4 flex items-baseline gap-3">
-        <span className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
+      {/* Bottom Content: Geist Mono Numeric Value and Change Badge */}
+      <div className="mt-4 flex items-baseline justify-between gap-2">
+        <span className="text-2xl lg:text-3xl font-mono font-normal tracking-tighter text-[#0A0A0A]">
           {data.value}
         </span>
         <span
           className={cn(
-            "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-semibold select-none",
+            "inline-flex items-center gap-1 rounded-[8px] px-2 py-0.5 font-mono text-xs font-normal select-none border",
             data.isPositive
-              ? "bg-[#DAFFF7] text-[#48B998]"
-              : "bg-[#FEF0F2] text-[#C02547]"
+              ? "bg-[#DCFCE7] text-[#15803D] border-green-200"
+              : "bg-black/5 text-[#0A0A0A]/70 border-black/10"
           )}
         >
           {data.change}
           {data.isPositive ? (
-            <TrendingUp className="h-3 w-3" />
+            <IconTrendingUp size={14} stroke={1.5} />
           ) : (
-            <TrendingDown className="h-3 w-3" />
+            <IconTrendingDown size={14} stroke={1.5} />
           )}
         </span>
       </div>

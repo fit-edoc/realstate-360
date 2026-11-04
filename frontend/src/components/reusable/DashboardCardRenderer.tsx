@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { DashboardCardConfig } from "@/types/dashboard";
@@ -23,33 +25,34 @@ const COMPONENT_REGISTRY: Record<string, React.ComponentType<any>> = {
 
 export interface DashboardCardRendererProps {
   card: DashboardCardConfig;
+  className?: string;
 }
 
-export function DashboardCardRenderer({ card }: DashboardCardRendererProps) {
+export function DashboardCardRenderer({ card, className }: DashboardCardRendererProps) {
   const Component = COMPONENT_REGISTRY[card.component];
 
   if (!Component) {
     return (
-      <div className="rounded-3xl border border-red-200 bg-red-50 p-4 text-xs text-red-600">
+      <div className="rounded-[12px] border border-red-200 bg-red-50 p-4 text-xs font-normal text-red-600">
         Unknown component: {card.component}
       </div>
     );
   }
 
-  // Responsive column span mapping based on card.colSpan:
-  // - small cards (colSpan: 1) render side-by-side (2 cols on tablet, 4 on desktop)
-  // - medium cards (colSpan: 2) take 2 cols
-  // - wide cards (colSpan: 3) take 3 cols
-  // - full cards (colSpan: 4) span full width
+  // Responsive 12-column bento grid mapping based on card.colSpan:
+  // - colSpan 1: 3 columns (e.g. 4 stat cards fill 12 columns)
+  // - colSpan 2: 6 columns
+  // - colSpan 3: 8 or 9 columns
+  // - colSpan 4: full 12 columns
   const colSpanClass = {
-    1: "col-span-1",
-    2: "col-span-1 sm:col-span-2 lg:col-span-2",
-    3: "col-span-1 sm:col-span-2 lg:col-span-3",
-    4: "col-span-1 sm:col-span-2 lg:col-span-4",
-  }[card.colSpan] || "col-span-1";
+    1: "col-span-12 sm:col-span-6 lg:col-span-3",
+    2: "col-span-12 lg:col-span-6",
+    3: "col-span-12 lg:col-span-8 xl:col-span-9",
+    4: "col-span-12",
+  }[card.colSpan] || "col-span-12";
 
   return (
-    <div className={cn("w-full h-full flex flex-col transition-all duration-150", colSpanClass)}>
+    <div className={cn("w-full h-full flex flex-col", colSpanClass, className)}>
       <Component data={card.data} title={card.title} className="h-full flex-1" />
     </div>
   );

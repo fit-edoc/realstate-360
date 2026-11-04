@@ -3,26 +3,26 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[8px] text-xs font-normal transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#16A34A] disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer",
   {
     variants: {
       variant: {
-        default: "bg-gray-900 text-white hover:bg-gray-800 shadow-sm",
-        gold: "bg-[#D4AF37] text-white hover:bg-[#c49e2e] shadow-xs",
-        outline: "border border-gray-200 bg-white text-gray-800 hover:bg-gray-50",
-        secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200",
-        ghost: "text-gray-700 hover:bg-gray-100 hover:text-gray-900",
-        navLink: "text-gray-600 hover:text-gray-950 hover:bg-gray-100/70 font-normal transition-colors",
-        navActive: "bg-[#D4AF37] text-white font-medium hover:bg-[#c49e2e] shadow-xs transition-colors",
+        default: "bg-[#0A0A0A] text-white hover:bg-[#0A0A0A]/90 border border-[#0A0A0A]",
+        primary: "bg-[#16A34A] text-white hover:bg-[#15803D] border border-[#16A34A]",
+        outline: "border border-white/80 bg-white/60 text-[#0A0A0A] hover:bg-white hover:border-white",
+        secondary: "bg-[#DCFCE7] text-[#15803D] hover:bg-[#BBF7D0] border border-green-200",
+        ghost: "text-[#0A0A0A]/70 hover:bg-white/60 hover:text-[#0A0A0A]",
+        navLink: "text-[#0A0A0A]/70 hover:text-[#0A0A0A] hover:bg-white/60 font-normal transition-colors",
+        navActive: "bg-[#DCFCE7] text-[#15803D] font-normal transition-colors",
       },
       size: {
-        default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8 text-base",
-        nav: "h-8 px-3.5 py-1.5 text-sm rounded-md",
-        icon: "h-9 w-9 rounded-md",
-        iconSm: "h-8 w-8 rounded-md",
-        iconRound: "h-9 w-9 rounded-full",
+        default: "h-8.5 px-3.5 py-1.5",
+        sm: "h-7.5 rounded-[8px] px-2.5 text-xs",
+        lg: "h-9.5 rounded-[8px] px-5 text-sm",
+        nav: "h-8 px-3 py-1.5 text-xs rounded-[8px]",
+        icon: "h-8.5 w-8.5 rounded-[8px]",
+        iconSm: "h-7.5 w-7.5 rounded-[8px]",
+        iconRound: "h-8.5 w-8.5 rounded-full",
       },
     },
     defaultVariants: {

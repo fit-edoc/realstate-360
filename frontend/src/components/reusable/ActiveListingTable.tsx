@@ -1,5 +1,6 @@
+"use client";
+
 import * as React from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ActiveListingItem } from "@/types/dashboard";
 
@@ -19,66 +20,70 @@ export function ActiveListingTable({
   return (
     <div
       className={cn(
-        "flex flex-col rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)]",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
         className
       )}
     >
-      <h3 className="text-base font-semibold text-gray-900 mb-4">{title}</h3>
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-xs font-normal tracking-tight text-[#0A0A0A]">{title}</h3>
+        <span className="font-mono text-[11px] font-normal text-[#0A0A0A]/50">
+          {data.properties.length} Properties
+        </span>
+      </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[620px] text-left text-xs">
+        <table className="w-full min-w-[580px] text-left text-xs">
           <thead>
-            <tr className="border-b border-gray-100 text-gray-400 font-medium">
-              <th className="pb-3 pl-1">Property</th>
-              <th className="pb-3">Type</th>
-              <th className="pb-3">Units</th>
-              <th className="pb-3">Price</th>
-              <th className="pb-3">Active Leads</th>
-              <th className="pb-3">Views</th>
-              <th className="pb-3 text-center">Status</th>
+            <tr className="border-b border-black/5 text-[11px] text-[#0A0A0A]/50 font-normal">
+              <th className="pb-2.5 pl-1 font-normal">Property</th>
+              <th className="pb-2.5 font-normal">Type</th>
+              <th className="pb-2.5 font-normal">Units</th>
+              <th className="pb-2.5 font-normal">Price</th>
+              <th className="pb-2.5 font-normal">Active Leads</th>
+              <th className="pb-2.5 font-normal">Views</th>
+              <th className="pb-2.5 text-center font-normal">Status</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-50/80">
+          <tbody className="divide-y divide-black/5">
             {data.properties.map((prop) => {
-              // Status Pill styling
               const isOccupied = prop.status === "Occupied";
               const isAvailable = prop.status === "Available";
               const isSoldOut = prop.status === "Sold Out";
 
               return (
-                <tr key={prop.id} className="transition-colors hover:bg-gray-50/70">
+                <tr key={prop.id} className="transition-colors hover:bg-white/60">
                   {/* Property Image + Title */}
-                  <td className="py-3.5 pl-1">
+                  <td className="py-3 pl-1">
                     <div className="flex items-center gap-2.5">
-                      <div className="relative h-9 w-9 overflow-hidden rounded-lg bg-gray-100 shrink-0 border border-gray-200/70">
+                      <div className="relative h-8 w-8 overflow-hidden rounded-[6px] bg-green-50 shrink-0 border border-white">
                         <img
                           src={prop.image || "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=100&q=80"}
                           alt={prop.name}
                           className="h-full w-full object-cover"
                         />
                       </div>
-                      <span className="font-semibold text-gray-900 whitespace-nowrap">
+                      <span className="font-normal text-[#0A0A0A] whitespace-nowrap text-xs">
                         {prop.name}
                       </span>
                     </div>
                   </td>
 
                   {/* Type */}
-                  <td className="py-3.5 text-gray-600 font-medium">{prop.type}</td>
+                  <td className="py-3 text-[#0A0A0A]/70 font-normal">{prop.type}</td>
 
                   {/* Units */}
-                  <td className="py-3.5 text-gray-700 font-medium">{prop.units}</td>
+                  <td className="py-3 font-mono text-[#0A0A0A]/80 font-normal">{prop.units}</td>
 
                   {/* Price */}
-                  <td className="py-3.5 text-gray-900 font-semibold">{prop.price}</td>
+                  <td className="py-3 font-mono font-normal text-[#0A0A0A]">{prop.price}</td>
 
                   {/* Active Leads (Avatar Stack) */}
-                  <td className="py-3.5">
+                  <td className="py-3">
                     <div className="flex items-center -space-x-1.5">
                       {(prop.leadAvatars || ["/avatars/lead-1.jpg", "/avatars/lead-2.jpg"]).map((avatarSrc, i) => (
                         <div
                           key={i}
-                          className="h-5 w-5 rounded-full ring-1.5 ring-white bg-slate-200 overflow-hidden"
+                          className="h-5 w-5 rounded-full border border-white bg-green-50 overflow-hidden"
                         >
                           <img
                             src={avatarSrc}
@@ -87,23 +92,23 @@ export function ActiveListingTable({
                           />
                         </div>
                       ))}
-                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-gray-200 text-[9px] font-bold text-gray-600 ring-1.5 ring-white">
+                      <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#DCFCE7] text-[9px] font-mono font-normal text-[#15803D] border border-white">
                         +{prop.activeLeadsCount}
                       </div>
                     </div>
                   </td>
 
                   {/* Views */}
-                  <td className="py-3.5 text-gray-600 font-medium">{prop.views}</td>
+                  <td className="py-3 font-mono text-[#0A0A0A]/70 font-normal">{prop.views}</td>
 
                   {/* Status Pill */}
-                  <td className="py-3.5 text-center">
+                  <td className="py-3 text-center">
                     <span
                       className={cn(
-                        "inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium whitespace-nowrap",
-                        isOccupied && "bg-cyan-50/90 text-cyan-600",
-                        isAvailable && "bg-emerald-50 text-emerald-600",
-                        isSoldOut && "bg-rose-50 text-rose-500"
+                        "inline-flex items-center rounded-[8px] px-2 py-0.5 text-[10px] font-normal whitespace-nowrap border",
+                        isAvailable && "bg-[#DCFCE7] text-[#15803D] border-green-200",
+                        isOccupied && "bg-green-50 text-[#14532D] border-green-100",
+                        isSoldOut && "bg-black/5 text-[#0A0A0A]/60 border-black/10"
                       )}
                     >
                       {prop.statusText || prop.status}

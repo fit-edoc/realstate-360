@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { PipelineItem } from "@/types/dashboard";
@@ -20,31 +22,31 @@ export function PipelineTable({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)] h-full",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none h-full",
         className
       )}
     >
       <div className="flex flex-col flex-1">
         <div className="flex items-center justify-between">
-          <h3 className="text-base font-semibold text-gray-900">{title}</h3>
-          <span className="text-xs font-medium text-gray-400">
+          <h3 className="text-xs font-normal tracking-tight text-[#0A0A0A]">{title}</h3>
+          <span className="font-mono text-[11px] font-normal text-[#0A0A0A]/50">
             {data.rows.length} Developments
           </span>
         </div>
 
-        <div className="mt-4 flex-1 overflow-x-auto">
-          <table className="w-full text-left text-sm">
+        <div className="mt-3 flex-1 overflow-x-auto">
+          <table className="w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-gray-100 text-xs font-semibold text-gray-500">
-                <th className="pb-3 font-medium">Development Name</th>
-                <th className="pb-3 text-right font-medium">Record Count</th>
+              <tr className="border-b border-black/5 text-[11px] font-normal text-[#0A0A0A]/50">
+                <th className="pb-2.5 font-normal">Development Name</th>
+                <th className="pb-2.5 text-right font-normal">Record Count</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-50">
+            <tbody className="divide-y divide-black/5">
               {data.rows.map((row, idx) => (
-                <tr key={idx} className="transition-colors hover:bg-gray-50/60">
-                  <td className="py-3 font-medium text-gray-800">{row.name}</td>
-                  <td className="py-3 text-right font-semibold text-gray-900">
+                <tr key={idx} className="transition-colors hover:bg-white/60">
+                  <td className="py-2.5 font-normal text-[#0A0A0A]">{row.name}</td>
+                  <td className="py-2.5 text-right font-mono font-normal text-[#0A0A0A]">
                     {row.count}
                   </td>
                 </tr>
@@ -54,10 +56,10 @@ export function PipelineTable({
         </div>
       </div>
 
-      {/* Clean Footer Total to cover bottom space */}
-      <div className="mt-4 pt-3.5 border-t border-gray-100 flex items-center justify-between text-xs">
-        <span className="font-medium text-gray-500">Total Pipeline Deals</span>
-        <span className="font-bold text-gray-900 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-200/60">
+      {/* Clean Footer Total */}
+      <div className="mt-3 pt-3 border-t border-black/5 flex items-center justify-between text-xs">
+        <span className="font-normal text-[#0A0A0A]/60">Total Pipeline Deals</span>
+        <span className="font-mono font-normal text-[#15803D] bg-[#DCFCE7] px-2.5 py-0.5 rounded-[8px] border border-green-200">
           {totalCount} Deals
         </span>
       </div>

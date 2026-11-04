@@ -1,5 +1,7 @@
+"use client";
+
 import * as React from "react";
-import { ArrowUpRight, Phone } from "lucide-react";
+import { IconArrowUpRight, IconPhone } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { LeadContactItem } from "@/types/dashboard";
 
@@ -19,32 +21,33 @@ export function LeadsContactsList({
   return (
     <div
       className={cn(
-        "flex flex-col justify-between rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.03)]",
+        "flex flex-col justify-between rounded-[12px] border border-white bg-white/80 backdrop-blur-md p-5 select-none",
         className
       )}
     >
       <div>
-        {/* Header with Title and Diagonal Arrow */}
-        <div className="flex items-center justify-between pb-3 border-b border-gray-100">
-          <h3 className="text-base font-semibold text-gray-900">{title}</h3>
+        {/* Header with Title and Tabler Arrow */}
+        <div className="flex items-center justify-between pb-2.5 border-b border-black/5">
+          <h3 className="text-xs font-normal tracking-tight text-[#0A0A0A]">{title}</h3>
           <button
+            type="button"
             aria-label="View all leads"
-            className="text-gray-400 hover:text-gray-700 transition-colors"
+            className="text-[#0A0A0A]/50 hover:text-[#15803D] transition-colors cursor-pointer"
           >
-            <ArrowUpRight className="h-4 w-4" />
+            <IconArrowUpRight size={16} stroke={1.5} />
           </button>
         </div>
 
         {/* Contacts List */}
-        <div className="mt-3 flex flex-col divide-y divide-gray-50">
+        <div className="mt-2.5 flex flex-col divide-y divide-black/5">
           {data.contacts.map((contact) => (
             <div
               key={contact.id}
-              className="flex items-center justify-between py-2.5 transition-colors hover:bg-gray-50/60 px-1 rounded-lg"
+              className="flex items-center justify-between py-2 transition-colors hover:bg-white/60 px-1 rounded-[8px]"
             >
               {/* Avatar + Info */}
-              <div className="flex items-center gap-3">
-                <div className="h-8 w-8 rounded-full overflow-hidden bg-gray-200 border border-gray-200/80 shrink-0">
+              <div className="flex items-center gap-2.5">
+                <div className="h-7 w-7 rounded-full overflow-hidden bg-green-50 border border-white shrink-0">
                   <img
                     src={contact.avatar || "/avatars/lead-1.jpg"}
                     alt={contact.name}
@@ -52,17 +55,18 @@ export function LeadsContactsList({
                   />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-gray-900">{contact.name}</h4>
-                  <p className="text-[10px] text-gray-400 font-normal">{contact.location}</p>
+                  <h4 className="text-xs font-normal text-[#0A0A0A]">{contact.name}</h4>
+                  <p className="text-[10px] text-[#0A0A0A]/50 font-normal">{contact.location}</p>
                 </div>
               </div>
 
               {/* Action Phone Icon */}
               <button
+                type="button"
                 aria-label={`Call ${contact.name}`}
-                className="flex h-7 w-7 items-center justify-center rounded-full text-black hover:text-gray-900 bg-gray-100 transition-colors"
+                className="flex h-7 w-7 items-center justify-center rounded-[8px] text-[#15803D] bg-green-50 hover:bg-[#DCFCE7] border border-green-200 transition-colors cursor-pointer"
               >
-                <Phone className="h-3.5 w-3.5" />
+                <IconPhone size={14} stroke={1.5} />
               </button>
             </div>
           ))}

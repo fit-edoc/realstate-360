@@ -70,5 +70,5 @@ export interface ScheduleItem {
   id: string;
   title: string;
   subtitle: string;
-  colorVariant: "green" | "teal" | "purple" | "gold";
+  colorVariant?: "green" | "emerald" | "forest" | "teal" | string;
 }

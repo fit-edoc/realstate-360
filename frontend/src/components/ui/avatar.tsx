@@ -3,14 +3,14 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const avatarVariants = cva(
-  "relative inline-flex shrink-0 overflow-hidden rounded-full border border-gray-200/80 bg-gray-100 select-none",
+  "relative inline-flex shrink-0 overflow-hidden rounded-full border border-white bg-white/70 select-none",
   {
     variants: {
       size: {
-        sm: "h-7 w-7 text-xs",
-        md: "h-9 w-9 text-sm",
-        lg: "h-11 w-11 text-base",
-        xl: "h-14 w-14 text-lg",
+        sm: "h-7 w-7 text-[10px]",
+        md: "h-8.5 w-8.5 text-xs",
+        lg: "h-10 w-10 text-sm",
+        xl: "h-12 w-12 text-base",
       },
     },
     defaultVariants: {
@@ -47,7 +47,7 @@ function Avatar({
           onError={() => setHasError(true)}
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center font-medium text-gray-600 bg-gray-200">
+        <div className="flex h-full w-full items-center justify-center font-normal text-[#0A0A0A]/70 bg-green-50">
           {fallback}
         </div>
       )}

@@ -3,9 +3,10 @@ import { DashboardCardConfig, ReminderItem, ScheduleItem } from "@/types/dashboa
 /**
  * Left Main Section Configuration - JSON data with component identifier & colSpan
  * Ready to be replaced by dynamic API responses.
+ * Updated to green design tokens.
  */
 export const LEFT_DASHBOARD_CARDS: DashboardCardConfig[] = [
-  // Row 1: 4 KPI Cards (colSpan: 1 each)
+  // Row 1: 4 KPI Cards (colSpan: 1 each -> 3 cols in 12-col bento grid)
   {
     id: "active-listing-kpi",
     component: "StatCard",
@@ -55,7 +56,7 @@ export const LEFT_DASHBOARD_CARDS: DashboardCardConfig[] = [
     },
   },
 
-  // Row 2: 2 Medium Cards (colSpan: 2 each)
+  // Row 2: Analytics & Stages
   {
     id: "deals-by-lead-source",
     component: "LeadSourceDonut",
@@ -63,10 +64,10 @@ export const LEFT_DASHBOARD_CARDS: DashboardCardConfig[] = [
     colSpan: 2,
     data: {
       sources: [
-        { name: "Website", count: 10, percentage: "24.83%", color: "#ebd287" },
-        { name: "Inbound Call", count: 9, percentage: "37.87%", color: "#f7eed4" },
-        { name: "Reference", count: 1, percentage: "30.6%", color: "#be9927" },
-        { name: "Facebook", count: 1, percentage: "6.78%", color: "#dfc674" },
+        { name: "Website", count: 10, percentage: "24.83%", color: "#22C55E" },
+        { name: "Inbound Call", count: 9, percentage: "37.87%", color: "#16A34A" },
+        { name: "Reference", count: 1, percentage: "30.6%", color: "#15803D" },
+        { name: "Facebook", count: 1, percentage: "6.78%", color: "#86EFAC" },
       ],
     },
   },
@@ -85,14 +86,14 @@ export const LEFT_DASHBOARD_CARDS: DashboardCardConfig[] = [
         { stage: "Offer Accepted", angelPlaza: 3.8, angelGarden: 2.7, none: 2.2 },
       ],
       legends: [
-        { label: "Angel Plaza", color: "#be9927" },
-        { label: "Angel Garden", color: "#ecdda9" },
-        { label: "None", color: "#f6eed3" },
+        { label: "Angel Plaza", color: "#16A34A" },
+        { label: "Angel Garden", color: "#4ADE80" },
+        { label: "None", color: "#BBF7D0" },
       ],
     },
   },
 
-  // Row 3: Left (Horizontal Bar + Deals Closed) & Right (Pipeline table)
+  // Row 3: Sales People Group & Deals in Pipeline
   {
     id: "deals-sales-people-group",
     component: "SalesAndDealsGroup",
@@ -105,9 +106,9 @@ export const LEFT_DASHBOARD_CARDS: DashboardCardConfig[] = [
           { owner: "Owner 2", angelPlaza: 3, angelGarden: 4.5, none: 6 },
         ],
         legends: [
-          { label: "Angel Plaza", color: "#be9927" },
-          { label: "Angel Garden", color: "#ecdda9" },
-          { label: "None", color: "#f6eed3" },
+          { label: "Angel Plaza", color: "#16A34A" },
+          { label: "Angel Garden", color: "#4ADE80" },
+          { label: "None", color: "#BBF7D0" },
         ],
       },
       dealsClosed: {
@@ -134,7 +135,7 @@ export const LEFT_DASHBOARD_CARDS: DashboardCardConfig[] = [
     },
   },
 
-  // Row 4: Active Listing (colSpan: 3 or 2.7) & Leads Contacts (colSpan: 1)
+  // Row 4: Active Listing (colSpan: 3) & Leads Contacts (colSpan: 1)
   {
     id: "active-listing-table",
     component: "ActiveListingTable",
@@ -268,25 +269,25 @@ export const RIGHT_DASHBOARD_DATA = {
       id: "sch-3",
       title: "Follow Up - Jessica Chen",
       subtitle: "jessica.chen@email.com",
-      colorVariant: "purple",
+      colorVariant: "emerald",
     },
     {
       id: "sch-4",
       title: "Follow Up – Roger Bouchard",
       subtitle: "roger.bouchard@clientmail.com",
-      colorVariant: "purple",
+      colorVariant: "emerald",
     },
     {
       id: "sch-5",
       title: "Submit Final Offer – Villa Deal",
       subtitle: "Finalize and send offer documents.",
-      colorVariant: "gold",
+      colorVariant: "forest",
     },
     {
       id: "sch-6",
       title: "Submit Internal Review – Apartment Pricing",
       subtitle: "Update CRM with latest market rates.",
-      colorVariant: "gold",
+      colorVariant: "forest",
     },
     {
       id: "sch-7",
@@ -298,7 +299,7 @@ export const RIGHT_DASHBOARD_DATA = {
       id: "sch-8",
       title: "Site Inspection – Rosehill Cottage",
       subtitle: "Physical verification of construction status",
-      colorVariant: "purple",
+      colorVariant: "emerald",
     },
   ] as ScheduleItem[],
 };

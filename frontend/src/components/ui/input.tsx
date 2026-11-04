@@ -3,16 +3,16 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const inputVariants = cva(
-  "flex w-full text-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
+  "flex w-full text-xs font-normal transition-colors file:border-0 file:bg-transparent file:text-xs file:font-normal placeholder:text-[#0A0A0A]/40 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50",
   {
     variants: {
       variant: {
         default:
-          "h-9 rounded-md border border-gray-200 bg-white px-3 py-1 shadow-2xs focus-visible:ring-2 focus-visible:ring-gray-400",
+          "h-8.5 rounded-[8px] border border-white/80 bg-white/70 px-3 py-1 text-[#0A0A0A] focus-visible:border-[#16A34A] focus-visible:bg-white focus-visible:ring-1 focus-visible:ring-[#16A34A]/30",
         search:
-          "h-9 rounded-md border border-gray-100 bg-gray-50/90 text-gray-800 placeholder:text-gray-400 focus-visible:bg-white focus-visible:border-gray-300 focus-visible:ring-2 focus-visible:ring-gray-200",
+          "h-8.5 rounded-[8px] border border-white/80 bg-white/60 pr-8 pl-3 text-[#0A0A0A] placeholder:text-[#0A0A0A]/40 focus-visible:bg-white focus-visible:border-[#16A34A] focus-visible:ring-1 focus-visible:ring-[#16A34A]/30",
         pill:
-          "h-8 rounded-full border border-gray-200/80 bg-gray-100/70 text-gray-800 placeholder:text-gray-400 hover:bg-gray-100 focus-visible:bg-white focus-visible:border-[#D4AF37] focus-visible:ring-2 focus-visible:ring-[#D4AF37]/20",
+          "h-8 rounded-[8px] border border-white/80 bg-white/60 text-[#0A0A0A] placeholder:text-[#0A0A0A]/40 hover:bg-white/80 focus-visible:bg-white focus-visible:border-[#16A34A] focus-visible:ring-1 focus-visible:ring-[#16A34A]/30",
       },
     },
     defaultVariants: {
