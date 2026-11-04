@@ -114,3 +114,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 70: style(stages): update Y-axis ticks and record count label to Geist Mono
 
 // commit step 71: style(stages): refine horizontal gridlines with soft black/5 dividers
+
+// commit step 72: style(stages): apply hover scale feedback on stacked bar segments
