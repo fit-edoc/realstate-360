@@ -49,3 +49,5 @@ export type ChartPaletteColor = typeof CHART_PALETTE[number];
 // commit step 19: refactor(typography): replace medium weight classes across button variants
 
 // commit step 26: fix(icons): map closed deals KPI to Tabler IconCircleCheck
+
+// commit step 32: feat(sidebar): craft crisp 8x8 pixel StateFlow mark SVG
